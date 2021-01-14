@@ -465,6 +465,7 @@ input[type=submit], input[type=button], button { -webkit-appearance: none; outli
   .info__cta { -webkit-box-ordinal-group: 3; -webkit-order: 2; -ms-flex-order: 2; order: 2; max-width: 600px; margin: 0 auto; -webkit-align-self: center; -ms-flex-item-align: center; align-self: center; padding: 40px 0 80px; }
   .info__award { -webkit-box-ordinal-group: 4; -webkit-order: 3; -ms-flex-order: 3; order: 3; -webkit-align-self: center; -ms-flex-item-align: center; align-self: center; }
   .slogan__text { padding: 100px 0 58px 115px; }
+  .accent__text { -webkit-transform: translateX(100px); -ms-transform: translateX(100px); transform: translateX(100px); }
   .cta__title-word:last-child { text-align: right; }
   .cta__button-box { -webkit-align-self: center; -ms-flex-item-align: center; align-self: center; padding-left: 5px; padding-right: 5px; width: 100%; } }
 
