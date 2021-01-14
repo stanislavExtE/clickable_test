@@ -116,7 +116,7 @@ var handler = function () {
 			var speed_values = [0.2, 0.3, 0,4];
 		
 	
-			for (var i = 0; i < $imgs.length; i++){
+			for (var i = 0; i < $balls.length; i++){
 				parallax($imgs[i], $wrapper, speed_values[i], 1);
 			}
 		})();

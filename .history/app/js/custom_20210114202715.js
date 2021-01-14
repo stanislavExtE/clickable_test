@@ -93,7 +93,32 @@ function addClassToVisible(element){
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+	(function knightParallax(){
+		var $imgs = document.querySelectorAll('.slogan__img');
+		var $wrapper = document.querySelector('.info');
+		var speed_values = [0.2, 0.3, 0,4];
 	
+
+		for (var i = 0; i < $balls.length; i++){
+			parallax($imgs[i], $wrapper, speed_values[i], 1);
+		}
+	})();
+
+	(function checkInViewportOnScroll(){
+		var $elements = ['.info__cta', '.accent', '.cta__button-box'];
+
+
+		for (var i = 0; i < $elements.length; i++){
+			var $element = document.querySelector($elements[i]);
+
+			addClassToVisible($element);
+			window.addEventListener('scroll', function(){
+				addClassToVisible($element);
+			})
+		}
+
+		
+	})();
 
 	
 
@@ -110,32 +135,6 @@ var handler = function () {
 
 	} else {
 		blockVH('.info');
-		(function knightParallax(){
-			var $imgs = document.querySelectorAll('.slogan__img');
-			var $wrapper = document.querySelector('.info');
-			var speed_values = [0.2, 0.3, 0,4];
-		
-	
-			for (var i = 0; i < $imgs.length; i++){
-				parallax($imgs[i], $wrapper, speed_values[i], 1);
-			}
-		})();
-	
-		(function checkInViewportOnScroll(){
-			var $elements = ['.info__cta', '.accent', '.cta__button-box'];
-	
-	
-			for (var i = 0; i < $elements.length; i++){
-				var $element = document.querySelector($elements[i]);
-	
-				addClassToVisible($element);
-				window.addEventListener('scroll', function(){
-					addClassToVisible($element);
-				})
-			}
-	
-			
-		})();
 	}
 
 }
