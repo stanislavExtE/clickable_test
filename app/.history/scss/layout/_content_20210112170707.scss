@@ -1,0 +1,98 @@
+
+//main styles
+// @import "sections/_name";
+
+.info{
+
+    &__content{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+
+.logo{
+    max-width: 260px;
+    display: block;
+}
+
+
+.slogan{
+
+}
+
+.cta{
+
+    &__title{
+
+    }
+
+    &__button-box{
+
+    }
+
+    &__btn{
+
+    }
+
+    &__rules-link{
+        
+    }
+}
+
+.award{
+
+    &__info{
+
+    }
+
+    &__prize{
+
+
+        &-img{
+
+        }
+    }
+
+    &__title{
+
+    }
+
+    &__description{
+
+    }
+}
+
+.balls{
+
+}
+
+.ball{
+
+
+}
+
+
+
+@include br-p($xl) {
+    
+}
+
+@include br-p($lg) {
+
+}
+@include br-p($md) {
+
+}
+@include br-p($sm) {
+
+}
+
+@include br-p($xs) {
+
+}
+
+@include br-p(419px) {
+
+}

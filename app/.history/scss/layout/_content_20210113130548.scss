@@ -1,0 +1,102 @@
+//main styles
+// @import "sections/_name";
+
+
+
+.logo {
+    max-width: 260px;
+    display: block;
+}
+
+
+.slogan {
+    
+
+    &__text {}
+
+    &__knight {}
+}
+
+.cta {
+    
+
+    &__title {}
+
+    &__button-box {}
+
+    &__btn {}
+
+    &__rules-link {}
+}
+
+.award {
+    display: flex;
+    
+    &__info {}
+
+    &__prize {
+
+
+        &-img {}
+    }
+
+    &__title {}
+
+    &__description {}
+}
+
+.info-section{
+    background: url(../img/bg.jpg) no-repeat center / cover;
+}
+
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &-section{
+        padding: 140px 0 130px;
+    }
+
+    &__slogan{
+        @include br-p(768px, min) {
+            order: 4;
+            flex: 0 0 calc(100% - 600px);
+        }
+    }
+
+    &__cta{
+        @include br-p(768px, min) {
+            order: 3;
+            flex: 0 0 600px;
+        }
+    }
+
+    &__award{
+        @include br-p(768px, min) {
+            display: none;
+            order: 2;
+            flex: 0 0 300px;
+        }
+    
+    }
+}
+
+
+.balls {}
+
+.ball {}
+
+
+
+@include br-p($xl) {}
+
+@include br-p($lg) {}
+
+@include br-p($md) {}
+
+@include br-p($sm) {}
+
+@include br-p($xs) {}
+
+@include br-p(419px) {}

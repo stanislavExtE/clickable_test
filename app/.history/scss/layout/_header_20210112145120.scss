@@ -1,0 +1,344 @@
+
+/*
+================================================================================
+|                                     HEADER                                   |
+================================================================================
+*/
+.header{
+	width:100%;
+	min-width: $min-width;
+	text-align:left;	
+	order: 1;	
+	-webkit-order: 1;
+	position: fixed;
+	left: 0;
+	width: 100%;
+	top: 0;
+	z-index: 10;
+	box-shadow: 0px 6px 23px rgba(0, 0, 0, 0.14);
+	
+	&.sticky {
+
+		
+	}
+
+
+	&__top{
+		background:$col-1;
+		color: $tc-2;
+		padding: 8px 0;
+		overflow: hidden;
+		max-height: 100px;
+		transition: $trs;
+	}
+
+	&__bottom{
+		background: $col-2;
+		padding: 15px 0;
+		color: $tc-1;
+		transition: $trs;
+		
+		&-container{
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+	}
+
+	&__contacts{
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+	}
+
+	&__contact{
+		margin-right: 56px;
+
+		&:last-child{
+			margin: 0;
+		}
+	}
+
+	&__logo{
+		padding-right: 25px;
+
+		&__pic{
+			max-width: 200px;
+			transition: $trs;
+			object-fit: contain;
+			object-position: center;
+			height: auto;
+		}
+	}
+
+	&__nav {
+		display: flex;
+		align-items: center;
+		padding: 0px 10px;
+
+		.nav__item {
+
+			&:hover {
+
+				@include br-p(992px, min) {
+
+
+					a:after {
+					}
+
+
+					span:after {
+					}
+
+					&>.sublist {
+						height: auto;
+						overflow: visible;
+						padding: 20px 11px;
+						opacity: 1;
+						z-index: 4;
+						transform: translateY(0);
+					}
+				}
+			}
+
+			&.parent:hover {
+
+				@include br-p(992px, min) {
+				}
+
+			}
+
+			&.shown {
+				background: rgba(#fff, .1);
+
+				&:after {
+					transform: rotate(180deg);
+				}
+			}
+		}
+
+		.nav-child {
+
+			.nav__item:hover {
+
+				@include br-p(992px, min) {
+
+					&>a,
+					&>span {
+
+					}
+				}
+			}
+
+		}
+
+		.sublist {
+			a {
+				display: block;
+				font-size: $f-s-sm;
+				line-height: $lh-sm;
+				padding: 7px 20px;
+				font-family: $base-font-family;
+			}
+		}
+
+		&-contacts{
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+		}
+
+		&-contact{
+			margin-bottom: 20px;
+			font-size: 18px;
+
+			i{
+				font-size: 18px;
+			}
+
+			span{
+				padding-top: 3px;
+			}
+
+			&:last-child{
+				margin: 0;
+			}
+		}
+	}
+
+	&__options{
+		display: flex;
+		align-items: center;
+	}
+}
+
+.nav {
+	flex: 1 1 auto;
+
+	&-close {
+		position: absolute;
+		right: 35px;
+		top: 48px;
+		cursor: pointer;
+		z-index: 10;
+		width: 35px;
+		height: 35px;
+		cursor: pointer;
+
+		&:before{
+			content: '';
+			position: absolute;
+			left: 0;
+			top: calc(50% - 1px);
+			width: 35px;
+			height: 2px;
+			background: $col-2;
+			border-radius: 6px;
+			transform-origin: center;
+			transform: rotate(0);
+			transition: transform .3s .2s;
+			
+
+			.active &{
+				transform: rotate(-45deg);
+				transition: transform .3s 1.2s;
+			}
+		}
+
+		&:after{
+			content: '';
+			position: absolute;
+			left: 0;
+			top: calc(50% - 1px);
+			width: 35px;
+			height: 2px;
+			background: $col-2;
+			border-radius: 6px;
+			transform-origin: center;
+			transform: rotate(0);
+			transition: transform .3s .2s;
+			
+
+			.active &{
+				transform: rotate(45deg);
+				transition: transform .3s 1.2s;
+			}
+		}
+
+
+		@include br-p(992px, min) {
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+
+		@include br-p(1280px, min) {
+			display: none;
+		}
+	}
+
+	&__list {
+		display: flex;
+		justify-content: center;
+		flex: 1;
+	}
+
+	&__item {
+		flex: 0 0 auto;
+		position: relative;
+		text-align: center;
+
+		&.active {
+			z-index: 2;
+
+		}
+	}
+
+	&__item {
+
+	}
+
+	&__link{
+
+		@include br-p(992px, min){
+
+			&:hover{
+				color: lighten($tc-1, 25%);
+			}
+		}
+	}
+}
+
+.burger {
+	display: none;
+	align-self: center;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 35px;
+	width: 100%;
+	cursor: pointer;
+	flex: 0 0 auto;
+	height: 20px;
+	padding: 4px 0;
+	width: 100%;
+	position: relative;
+	cursor: pointer;
+	flex: 0 0 35px;
+
+	&__line{
+		height: 2px;
+		width: 100%;
+		border-radius: 6px;
+		background: $col-1;
+
+		&:last-child{
+			margin: 0;
+		}
+	}
+
+	@include br-p(992px, min){
+		&:hover{
+			opacity: 0.6;
+		}
+	}
+
+	@include br-p($lg) {
+		display: flex;
+	}
+
+}
+
+
+
+
+
+
+@include br-p($xl) {
+    
+}
+
+@include br-p($lg) {
+
+}
+@include br-p($md) {
+
+}
+@include br-p($sm) {
+
+}
+
+@include br-p($xs) {
+
+
+
+}
+
+@include br-p(419px) {
+
+
+}
+
+@include br-p(359px) {
+	
+}

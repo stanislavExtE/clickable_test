@@ -1,0 +1,87 @@
+
+/*
+================================================================================
+|                                     HEADER                                   |
+================================================================================
+*/
+.header{
+	width:100%;
+	min-width: $min-width;
+	text-align:left;	
+	order: 1;	
+	-webkit-order: 1;
+	position: absolute;
+	left: 0;
+	width: 100%;
+	top: 0;
+	z-index: 3;
+	// background: linear-gradient(180deg, rgba(#000, .6) 20%, transparent);
+	padding: 32px 0 30px;
+
+	&__content{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding-left: 4px;
+	}
+
+	&__logo {
+		flex: 0 0 260px;
+		max-width: 260px;
+	}
+	
+	&__award{
+
+		@include br-p(993px, min){
+			transform: translateX(5px);
+			padding-bottom: 4px;
+		}
+	}
+}
+
+
+
+
+
+@include br-p($xl) {
+    
+}
+
+@include br-p($lg) {
+
+}
+@include br-p($md) {
+
+	
+
+	
+}
+@include br-p($sm) {
+	.header__content{
+		display: block;
+	}
+
+	.header__logo{
+		margin: 0 auto;
+	}
+	
+}
+
+@include br-p($xs) {
+
+	.header{
+		padding-top: 43px;
+		padding-bottom: 20px;
+	}
+
+
+}
+
+@include br-p(419px) {
+	
+
+}
+
+@include br-p(359px) {
+	
+}

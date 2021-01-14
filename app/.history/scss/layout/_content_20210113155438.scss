@@ -1,0 +1,190 @@
+//main styles
+// @import "sections/_name";
+
+
+
+.logo {
+    max-width: 260px;
+    display: block;
+}
+
+
+.slogan {
+
+
+    &__text {}
+
+    &__knight {}
+}
+
+.cta {
+    display: flex;
+    flex-direction: column;
+
+
+    &__title {
+        font-family: $custom-font-family;
+        font-size: 48px;
+        text-transform: uppercase;
+    }
+
+    &__button-box {}
+
+    &__btn {}
+
+    &__rules-link {}
+}
+
+.accent {
+    position: relative;
+    font-size: 97px;
+    letter-spacing: -0.25px;
+    font-weight: 700;
+    transform: skew(-6deg);
+    display: block;
+    display: flex;
+    padding-left: 75px;
+
+    &:before {
+        content: attr(data-accent-word);
+        display: block;
+        position: absolute;
+        width: 20px;
+        left: 0;
+        top: 0;
+        color: rgba(#000, .2);
+        -webkit-text-stroke-color: #fff;
+        -webkit-text-stroke-width: 1px;
+        overflow: hidden;
+    }
+
+    &__word{
+        position: absolute;
+        width: 50px;
+        left: 0;
+        top: 0;
+        color: rgba(#000, .2);
+        -webkit-text-stroke-color: #fff;
+        -webkit-text-stroke-width: 1px;
+        overflow: hidden;
+
+        &:nth-child(2){
+            left: 40px;
+        }
+
+        &::before{
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0.18em;
+            width: 2px;
+            height: 18px;
+            background: #ffffff;
+        }
+    }
+
+    &__text {
+        z-index: 2;
+        transform: translateX(20px);
+        -webkit-text-stroke-color: $col-1;
+        -webkit-text-stroke-width: 1px;
+
+        color: $col-1;
+
+        &::before {
+            position: absolute;
+            content: attr(data-accent-text);
+            color: rgba(#000, .2);
+            -webkit-text-stroke-color: #fff;
+            -webkit-text-stroke-width: 1px;
+            left: 0;
+            top: 0;
+            z-index: -1;
+            transform: translateX(-15px);
+        }
+    }
+}
+
+.award {
+    display: flex;
+    align-items: flex-end;
+    max-width: 290px;
+
+    &__info {}
+
+    &__prize {
+        flex: 0 0 40px;
+
+        &-img {}
+    }
+
+    &__title {
+        font-size: 21px;
+        line-height: 24px;
+        text-transform: uppercase;
+        font-weight: 800;
+    }
+
+    &__description {
+        font-size: 9px;
+        text-transform: uppercase;
+        color: rgba(#fff, .4);
+        padding: 2px 0;
+    }
+}
+
+.info-section {
+    background: url(../img/bg.jpg) no-repeat center / cover;
+}
+
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &-section {
+        padding: 140px 0 130px;
+    }
+
+    &__slogan {
+        @include br-p(768px, min) {
+            order: 4;
+            flex: 0 0 calc(100% - 600px);
+        }
+    }
+
+    &__cta {
+        @include br-p(768px, min) {
+            order: 3;
+            flex: 0 0 600px;
+        }
+    }
+
+    &__award {
+        @include br-p(768px, min) {
+            display: none;
+            order: 2;
+            flex: 0 0 300px;
+        }
+
+    }
+}
+
+
+.balls {}
+
+.ball {}
+
+
+
+@include br-p($xl) {}
+
+@include br-p($lg) {}
+
+@include br-p($md) {}
+
+@include br-p($sm) {}
+
+@include br-p($xs) {}
+
+@include br-p(419px) {}
