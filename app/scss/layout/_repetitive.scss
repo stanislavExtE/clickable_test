@@ -233,7 +233,7 @@
     border-radius: 0;
     position: relative;
     transform: skew(-9deg);
-    padding: 10px 5px 20px;
+    padding: 10px 5px 15px;
     z-index: 2;
 
     &::after{
@@ -267,15 +267,16 @@
         
 
         &:hover{
+            transform: translate(5px, 5px) skew(-9deg);
 
             &:after{
-                transform: translate(5px, 5px);
+                transform: translate(0, 0);
             }
 
             &:before{
                 background: #ffffff;
                 border-color: #fff;
-                transform: translate(5px, 5px);
+                
             }
         }
 

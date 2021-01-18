@@ -102,6 +102,7 @@
         margin-top: 40px;
         letter-spacing: -0.4px;
         margin-right: 8px;
+        align-self: center;
 
     }
 }
@@ -459,6 +460,9 @@
         padding-right: 5px;
         width: 100%;
     }
+    .slogan__img img{
+        width: 320px;
+    }
 }
 
 @include br-p($sm) {
@@ -552,6 +556,10 @@
 
     .cta__rules-link {
         margin-top: 24px;
+    }
+
+    .slogan__img img{
+        width: auto;
     }
 }
 
